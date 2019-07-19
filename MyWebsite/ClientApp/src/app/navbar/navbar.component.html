@@ -1,0 +1,67 @@
+
+<div [ngClass]="{'nav-area': windowScrolled, 'nav-area1': !windowScrolled}"class="nav-area">
+  <nav class="navbar navbar-expand-lg navbar-light " style="background-color:transparent;">
+
+    <button (click)="toggleNav()" class="navbar-toggler" type="button" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
+      <i class="fa fa-times fa-2x" *ngIf="isNavOpen"></i>
+      <i class="fa fa-bars fa-2x" *ngIf="!isNavOpen"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul>
+        <li class="nav-item">
+          <a class="nav-link"
+             (click)=" onClick('about')"
+             [routerLink]="['/']"
+             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}" >About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             (click)=" onClick('offer')"
+             [routerLink]="['/']"
+             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             (click)=" onClick('skills')"
+             [routerLink]="['/']"
+             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             (click)=" onClick('portfolio')"
+             [routerLink]="['/']"
+             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">Portfolio</a>
+        </li>
+        <li>
+          <button class="btn btn-outline-secondary"
+                  (click)=" onClick('contact')"
+                  [ngClass]="{'contact_button1': windowScrolled, 'contact_button2': !windowScrolled}">Contact me</button>
+        </li>
+      </ul>
+    </div>
+    <ul *ngIf="isNavOpen">
+      <li class="nav-item">
+        <a (click)=" onClick('about'); toggleNav() " [routerLink]="['/']" class="nav-link a1" >About me</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="onClick('offer'); toggleNav()" [routerLink]="['/']" class="nav-link a1" >Services</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="onClick('skills'); toggleNav()" [routerLink]="['/']" class="nav-link a1">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="onClick('portfolio'); toggleNav()" [routerLink]="['/']" class="nav-link a1">Portfolio</a>
+      </li>
+      <li>
+        <button (click)="onClick('contact'); toggleNav()" [routerLink]="['/']" class="btn btn-outline-secondary contact_button1" > Contact me</button>
+      </li>
+    </ul>
+  </nav>
+</div>
+
+<ul id="mainNav">
+  <li><a href="https://www.facebook.com/nemanja.prentic" target="_blank"> <i class="fa fa-facebook fa-2x" ></i></a></li>
+  <li><a href="https://github.com/NPrentic/nprentic" target="_blank"> <i class="fa fa-github fa-2x" ></i></a></li>
+  <li><a href="https://www.linkedin.com/" target="_blank"> <i class="fa fa-linkedin fa-2x"></i></a></li>
+</ul>

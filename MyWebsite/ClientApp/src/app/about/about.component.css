@@ -1,0 +1,61 @@
+
+#about-component {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 7vh 0;
+  text-align:center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(sandybrown,sandybrown,white,white,white,white,white,white,sandybrown,sandybrown);
+  width: 300px;
+  border-radius: 100%;
+  padding: 20px;
+}
+
+#circle {
+  background-image: url('../../assets/img/cvPhoto.PNG');
+  background-position: 50% 22%;
+  background-repeat: no-repeat;
+  background-size: 450px auto;
+  border: 5px solid whitesmoke;
+  border-radius: 50%;
+  width: 270px;
+  height: 270px;
+  opacity: 0.9;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #about-component {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 10% 5%;
+    text-align: center;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(sandybrown,sandybrown,white,white,white,white,white,white,sandybrown,sandybrown);
+    width: 200px;
+    border-radius: 100%;
+    padding: 10px;
+  }
+
+  #circle {
+    background-image: url('../../assets/img/cvPhoto.PNG');
+    background-position: 50% 18%;
+    background-size: 300px auto;
+    border: 5px solid whitesmoke;
+    border-radius: 50%;
+    width:190px;
+    height: 190px;
+    opacity: 0.9;
+  }
+
+}

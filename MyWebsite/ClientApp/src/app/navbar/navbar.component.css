@@ -1,0 +1,180 @@
+
+.nav-area {
+  position: fixed;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  background-color: sandybrown;
+  transition: ease 0.8s;
+}
+
+.nav-area1 {
+  position: fixed;
+  top: 0;
+  padding: 0;
+  width: 100%;
+  background-color: transparent;
+  transition: ease 0.8s;
+}
+
+nav {
+ margin:0;
+ padding:0;
+}
+
+button {
+  display:flex;
+  justify-content: center;
+  width: 50px;
+  height:50px;
+  background-color:cadetblue;
+  opacity:0.8;
+  margin:10px;
+
+}
+
+i {
+ color:sandybrown;
+}
+
+.a1 {
+  font-family: 'Lucida Console';
+  color: lightgoldenrodyellow;
+  font-size: 1.2em;
+}
+
+.a2 {
+  font-family: 'Lucida Console';
+  color: lightgray;
+  font-size: 1.2em;
+}
+
+.a1:hover {
+  color: cadetblue;
+}
+.a2:hover {
+  color: gray;
+}
+
+ul {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+}
+
+.contact_button1 {
+  font-family: 'Lucida Console';
+  border: 2px solid lightgoldenrodyellow;
+  color: lightgoldenrodyellow;
+  width: 150px;
+  background-color: transparent;
+  font-size: 1.2em;
+}
+
+.contact_button2 {
+  font-family: 'Lucida Console';
+  border: 2px solid lightgray;
+  color: lightgray;
+  width: 150px;
+  background-color: transparent;
+  font-size: 1.2em;
+}
+
+.contact_button1:hover {
+  color: cadetblue;
+  border-color: cadetblue;
+}
+
+.contact_button2:hover {
+  color: gray;
+  border-color: gray;
+}
+
+li {
+  list-style: none;
+}
+
+@media only screen and (max-width: 950px) {
+
+  .nav-area, .nav-area1 {
+    background-color:transparent;
+  }
+
+  ul {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    padding: 0;
+    margin: 0;
+    background-color: sandybrown;
+  }
+  li {
+    margin:4vh;
+    list-style: none;
+  }
+
+}
+
+/*Social networks liks*/
+
+
+
+#mainNav {
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  position: fixed;
+  top: 70vh;
+  left: -195px;
+  width: 210px;
+  height: 70px;
+  background-color: white;
+  padding-right: 10px;
+  padding-left: 15px;
+  cursor: pointer;
+  box-shadow: 4px 1px 2px #CCC;
+  border-radius: 0px 5px 5px 0px;
+  -moz-border-radius: 0px 5px 5px 0px;
+  -webkit-border-radius: 0px 5px 5px 0px;
+  opacity: 0.8;
+}
+
+  #mainNav li {
+    margin: 10px;
+  }
+
+  #mainNav i {
+    color: cadetblue;
+  }
+    #mainNav i:hover {
+      color: dimgray;
+    }
+
+  #mainNav:hover {
+    left: 0%;
+    transition-property: left;
+    -moz-transition-property: left;
+    -webkit-transition-property: left;
+    -o-transition-property: left;
+    transition-duration: 100ms;
+    transition-timing-function: linear;
+    transition-delay: 0s;
+    -moz-transition-duration: 200ms;
+    -moz-transition-timing-function: linear;
+    -moz-transition-delay: 0s;
+    -webkit-transition-duration: 200ms;
+    -webkit-transition-timing-function: linear;
+    -webkit-transition-delay: 0s;
+    -o-transition-duration: 200ms;
+    -o-transition-timing-function: linear;
+    -o-transition-delay: 0s;
+  }

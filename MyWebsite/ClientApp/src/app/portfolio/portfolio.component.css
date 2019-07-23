@@ -1,7 +1,7 @@
 
 #portfolioComponent {
   text-align:center;
-  padding:7vh 5%;
+  padding:11vh 5%;
   background-color: dimgray;
 }
 
@@ -20,6 +20,7 @@
   position: relative;
   background: url("http://www.15ost.de/tutorial/ud_1.jpg");
   background-size: cover;
+  border-radius: 4%;
 }
 
   .screenshot-container .sliding_box span {

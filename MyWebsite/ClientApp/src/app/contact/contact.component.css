@@ -31,7 +31,6 @@ ul {
 .info {
   display: flex;
   justify-content: center;
-  align-items: center;
   width: 300px;
   height: auto;
   flex-direction: column;
@@ -94,6 +93,7 @@ ul {
 
      button {
       width: 150px;
+      font-family: 'Lucida Console';
       background-color:transparent;
       color: cadetblue;
       border: 2px solid cadetblue;
@@ -104,6 +104,32 @@ ul {
 }
 .inputs textarea {
   resize: none;
+}
+
+p {
+  font-family: 'Lucida Console';
+  color: dimgray;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.35, 1.35, 1.35);
+  }
+
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.pulse {
+  color: sandybrown;
+  animation-name: pulse;
+  animation-duration:1s;
+  animation-iteration-count: infinite;
 }
 
 
@@ -140,25 +166,4 @@ ul {
     padding: 5%;
   }
 
-}
-
-
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
-}
-
-.pulse {
-  color: dimgray;
-  animation-name: pulse;
-  animation-iteration-count:infinite;
 }

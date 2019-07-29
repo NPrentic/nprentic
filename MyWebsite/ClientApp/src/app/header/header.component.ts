@@ -14,6 +14,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+ 
+
+
   onClick(): void { this.sectionEvent.emit('about'); }
 
 }

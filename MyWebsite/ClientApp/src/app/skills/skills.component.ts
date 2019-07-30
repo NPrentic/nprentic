@@ -11,5 +11,8 @@ export class SkillsComponent implements OnInit {
 
   ngOnInit() {
   }
+  goToLink(url: string) {
+    window.open(url, "_blank");
+  }
 
 }

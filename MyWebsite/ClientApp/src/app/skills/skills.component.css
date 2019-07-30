@@ -25,6 +25,9 @@
 }
 
 /*Button*/
+a.button {
+ cursor:pointer;
+}
 
 .button {
   font-size: .8em;

@@ -57,7 +57,7 @@ a.a2:hover {
 }
 
 a.a1.focus {
-  color: indianred;
+  color: dimgray;
 }
 a.a2.focus {
   color: darkseagreen;
@@ -98,8 +98,8 @@ ul {
 }
 
 .contact_button1:hover {
-  color: indianred;
-  border-color: indianred;
+  color: dimgray;
+  border-color: dimgray;
 }
 
 .contact_button2:hover {
@@ -108,8 +108,8 @@ ul {
 }
 
 button.contact_button1.focus {
-  color: indianred;
-  border:2px solid indianred;
+  color: dimgray;
+  border: 2px solid dimgray;
   outline: none;
 }
 button.contact_button2.focus {

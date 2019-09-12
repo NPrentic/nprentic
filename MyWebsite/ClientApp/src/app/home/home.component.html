@@ -1,19 +1,25 @@
-<app-header (section-event)="gotoSection($event)"></app-header>
-<div #about>
-  <app-about></app-about>
+
+
+<div #header>
+  <app-header (section-event)="gotoSection($event)"  (appear)="setFocusedComponent('header')"></app-header>
 </div>
-<div #offer>
-  <app-offer></app-offer>
-</div>
-<div #skills>
-  <app-skills></app-skills>
-</div>
-<div #portfolio>
-  <app-portfolio></app-portfolio>
-</div>
-<div #contact>
-  <app-contact></app-contact>
-</div>
-<app-footer></app-footer>
-<scroll-top></scroll-top>
-<app-navbar (section-event)="gotoSection($event)"></app-navbar>
+
+  <div #about  (appear)="setFocusedComponent('about')">
+    <app-about  ></app-about>
+  </div>
+  <div #offer>
+    <app-offer  (appear)="setFocusedComponent('offer')"></app-offer>
+  </div>
+  <div #skills>
+    <app-skills  (appear)="setFocusedComponent('skills')"></app-skills>
+  </div>
+  <div #portfolio>
+    <app-portfolio  (appear)="setFocusedComponent('portfolio')"></app-portfolio>
+  </div>
+  <div #contact>
+    <app-contact (appear)="setFocusedComponent('contact')"></app-contact>
+  </div>
+  <app-footer></app-footer>
+  <scroll-top></scroll-top>
+  <app-navbar (section-event)="gotoSection($event)" [focused]="focusedComponent"></app-navbar>
+

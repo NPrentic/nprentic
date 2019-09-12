@@ -7,16 +7,23 @@ import { Component, ViewChild, ElementRef } from '@angular/core';
 })
 export class HomeComponent  {
 
+  @ViewChild('header') sectionHeader: ElementRef;
   @ViewChild('about') sectionAbout: ElementRef;
   @ViewChild('skills') sectionSkills: ElementRef;
   @ViewChild('offer') sectionOffer: ElementRef;
   @ViewChild('portfolio') sectionPortfolio: ElementRef;
   @ViewChild('contact') sectionContact: ElementRef;
-
+  showLoader: boolean = true;
+  focusedComponent: string = 'header';
 
   constructor() { }
 
+  onVideoLoad() { this.showLoader = false; }
+
   public gotoSection(section: string): void {
+    if (section == 'header')
+      this.sectionHeader.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
     if (section == 'about')
       this.sectionAbout.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
@@ -33,5 +40,9 @@ export class HomeComponent  {
       this.sectionContact.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
+  setFocusedComponent(focusedComponentName: string): void {
+    this.focusedComponent = focusedComponentName;
+   // console.log(this.focusedComponent);
+  }
 
 }

@@ -2,12 +2,10 @@
   display:flex;
   justify-content:center;
   flex-direction:column;
-  width: 100vw;
+  width: 100%;
   height: auto;
   padding: 11vh 0vw;
-  margin:0;
-  background-color:lightgoldenrodyellow;
-
+  background-color:whitesmoke;
 }
 
 ul {
@@ -51,12 +49,12 @@ ul {
 /* CONTACT */
 /* ------- */
 
-.email-part {
+div.email-part {
   display: flex;
   flex-direction: column;
   align-items: center;
   height: auto;
-  background-color: lightgoldenrodyellow;
+  background-color: white;
   padding: 5%;
 }
 

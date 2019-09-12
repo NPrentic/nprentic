@@ -2,7 +2,7 @@
 #portfolioComponent {
   text-align:center;
   padding:11vh 5%;
-  background-color: dimgray;
+  background-color: darkgray;
 }
 
 .portfolio-container {
@@ -10,70 +10,121 @@
   flex-wrap: wrap;
   justify-content:center;
   text-align: center;
+
 }
 
 .screenshot-container {
   display: inline-block;
-  height: 400px;
+  height: 280px;
   width: 450px;
-  margin: 20px;
+  margin: 3% 3%;
   position: relative;
-  background: url("http://www.15ost.de/tutorial/ud_1.jpg");
-  background-size: cover;
-  border-radius: 4%;
+  background-color: black;
+  transition: 300ms ease-in;
 }
-
-  .screenshot-container .sliding_box span {
-    color: #fff;
-    font-family: Gotham,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 14px;
-    opacity: 0;
-  }
-
-.sliding_box {
-  background-color: transparent;
-  border: 3px solid cadetblue;
-  left: 6%;
-  padding: 5% 7% 7%;
+.screenshot {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  transition: 300ms ease-in;
+}
+.desktop-container {
+  height: 100%;
+  width: 100%;
+  border: 2px solid rgba(255,255,255,0.8);
+  overflow: hidden;
+}
+.mobile-contaier {
   position: absolute;
-  right: 5%;
-  text-align: left;
-  top: 20px;
-  width: 87%;
-  transition: all 400ms ease 0s;
+  height: 70%;
+  width: 24%;
+  right: -15%;
+  bottom: -10%;
+  background-color: black;
+  border-radius: 7px;
+  overflow: hidden;
+  border: 2px solid rgba(255,255,255,0.8);
+  transition: 300ms ease-in;
 }
 
+.inf, .link {
+  position: absolute;
+  top: 35%;
+  color: lightgoldenrodyellow;
+  font-size: 3em;
+  cursor: pointer;
+  opacity: 0;
+  transition: 200ms ease-in;
+}
+i {
+  transition: 100ms ease-in-out;
+}
+.inf {
+  left:0%;
+}
 
+.link {
+  right: 0%;
+}
+
+.screenshot-container span {
+ color: whitesmoke;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ font-size:1.2em;
+}
 
 @media only screen and (max-width: 600px) {
-
   .screenshot-container {
+    right: 3%;
     display: inline-block;
-    height: 250px;
-    width: 275px;
-    margin: 2%;
+    height: 160px;
+    width: 235px;
+    margin: 6% 2%;
     position: relative;
-    background: url("http://www.15ost.de/tutorial/ud_1.jpg");
-    background-size: cover;
+    border-radius: 12px;
+    background-color: black;
   }
 
-    .screenshot-container .sliding_box span {
-      color: #fff;
-      font-family: Gotham,"Helvetica Neue",Helvetica,Arial,sans-serif;
-      font-size: 15px;
-      opacity: 0;
-    }
+  .mobile-contaier {
+    border-radius: 4px;
+  }
+
+  .inf, .link {
+    font-size: 1.5em;
+  }
+  .inf {
+    left:15%;
+  }
+  .link {
+   right:15%;
+  }
+
+  .screenshot-container span {
+    font-size: 0.8em;
+  }
 }
 
+.screenshot-container:hover .desktop-container img {
+  opacity: 0.2;
+  transform: scale(1.4)
+}
 
-  .screenshot-container:hover > .sliding_box {
-    top: 50%;
-  }
+.screenshot-container:hover .link {
 
-    .screenshot-container:hover > .sliding_box span {
-      opacity: 1;
-    }
+  font-size: 1.5em;
+  right:30%;
+  opacity: 1;
+}
+.screenshot-container:hover .inf {
+  font-size: 1.5em;
+  left:30%;
+  opacity: 1;
+}
 
-  h3 {
-    color: sandybrown;
-  }
+.link:hover i {
+  color: indianred;
+}
+.inf:hover i {
+  color: indianred;
+}
+

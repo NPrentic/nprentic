@@ -1,34 +1,46 @@
-<div id="portfolioComponent">
+<div id="portfolioComponent" (appear)="state = 'show'">
   <h2 align="center" style="color:whitesmoke;">What have I done lately?</h2>
   <br />
 
-  <div class="portfolio-container">
-
+  <div class="portfolio-container" [@portfolio_appear] =" state">
     <div class="screenshot-container">
-      <br />
-      <br />
-      <h3>Soon...</h3>
-      <div class="sliding_box">
-        <span>Project description</span>
+      <div class="desktop-container">
+        <img src="../../assets/img/DeviceTrackerDesktop.PNG" alt="screenshoot" class="screenshot" />
       </div>
+      <div class="inf">
+        <i class="fa fa-info-circle fa-2x"></i>
+      </div>
+      <div class="link" (click)="goToLink('http://devicetracker.3gproxy.com/home')">
+        <i class="fa fa-external-link fa-2x"></i>
+      </div>
+      <span>3G Proxy - Live Device Tracker</span>
+      <div class="mobile-contaier"><img src="../../assets/img/DeviceTrackerMobile.PNG" alt="screenshoot" class="screenshot" /></div>
     </div>
-
     <div class="screenshot-container">
-      <br />
-      <br />
-      <h3>Soon...</h3>
-      <div class="sliding_box">
-        <span>Project description</span>
+      <div class="desktop-container">
+        <img src="http://www.15ost.de/tutorial/ud_1.jpg" alt="screenshoot" class="screenshot" />
       </div>
+      <div class="inf">
+        <i class="fa fa-info-circle fa-2x"></i>
+      </div>
+      <div class="link">
+        <i class="fa fa-external-link fa-2x"></i>
+      </div>
+      <span>Soon...</span>
+      <div class="mobile-contaier"><img src="http://www.15ost.de/tutorial/ud_1.jpg" alt="screenshoot" class="screenshot" /></div>
     </div>
-
     <div class="screenshot-container">
-      <br />
-      <br />
-      <h3>Soon...</h3>
-      <div class="sliding_box">
-        <span>Project description</span>
+      <div class="desktop-container">
+        <img src="http://www.15ost.de/tutorial/ud_1.jpg" alt="screenshoot" class="screenshot" />
       </div>
+      <div class="inf">
+        <i class="fa fa-info-circle fa-2x"></i>
+      </div>
+      <div class="link">
+        <i class="fa fa-external-link fa-2x"></i>
+      </div>
+      <span>Soon...</span>
+      <div class="mobile-contaier"><img src="http://www.15ost.de/tutorial/ud_1.jpg" alt="screenshoot" class="screenshot" /></div>
     </div>
   </div>
 </div>

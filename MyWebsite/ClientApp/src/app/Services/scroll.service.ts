@@ -1,4 +1,4 @@
-import { Injectable, Inject, HostListener } from '@angular/core';
+import { Injectable, Inject, HostListener, ElementRef } from '@angular/core';
 import { DOCUMENT } from '@angular/platform-browser';
 
 @Injectable({
@@ -23,4 +23,17 @@ export class ScrollService {
       this.windowScrolled = false;
     }
   }
+
+    @HostListener('window:scroll',[])
+     showOnScroll(el: ElementRef): string {
+      const componentPosition = el.nativeElement.offsetTop;
+      const scrollPosition = window.pageYOffset;
+      if (scrollPosition > componentPosition - window.innerHeight && scrollPosition <= componentPosition + window.innerHeight) {
+        return 'show'
+      }
+      else {return 'hide' }
+  }
+
+
+
 }

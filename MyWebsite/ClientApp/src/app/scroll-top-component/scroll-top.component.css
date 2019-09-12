@@ -9,3 +9,11 @@
   opacity: 1;
   transition: all 0.8s ease-in-out;
 }
+
+button{
+  background-color: darkseagreen;
+  border: none;
+}
+button:hover {
+  background-color: darkgray;
+}

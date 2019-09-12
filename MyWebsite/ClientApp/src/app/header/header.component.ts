@@ -1,9 +1,11 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { resize } from './animations.header';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  animations: [resize]
 })
 export class HeaderComponent implements OnInit {
 
@@ -11,11 +13,7 @@ export class HeaderComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
-
- 
-
+  ngOnInit() { }
 
   onClick(): void { this.sectionEvent.emit('about'); }
 

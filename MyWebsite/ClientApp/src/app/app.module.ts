@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { InViewportModule } from 'ng-in-viewport';
+
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -17,6 +20,7 @@ import { OfferComponent } from './offer/offer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
+import { InViewDirective } from './Directives/in-view';
 
 @NgModule({
   declarations: [
@@ -30,16 +34,20 @@ import { FooterComponent } from './footer/footer.component';
     OfferComponent,
     PortfolioComponent,
     ContactComponent,
+    InViewDirective,
     FooterComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     RouterModule,
+    InViewportModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
     FormsModule
   ],
   providers: [ScrollService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

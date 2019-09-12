@@ -1,20 +1,37 @@
-<div id="about-component">
-  <h2 >Who am I?</h2>
+<div id="about-component" (appear)="state = 'show'">
+  <h2>Who am I?</h2>
   <h5>(couldn't resist to this one)</h5>
   <br />
-  <div class="image-container">
-    <div id="circle"></div>
+  <div [@EnterFromLeft]="state">
+    <div class="image-container">
+      <div id="circle" #circle>
+        <img [hidden]="position != 'center'" src="../../assets/img/normal.jpg" alt="Alternate Text" />
+        <img [hidden]="position != 'left'" src="../../assets/img/left.jpg" alt="Alternate Text" />
+        <img [hidden]="position != 'up-left'" src="../../assets/img/up-left.jpg" alt="Alternate Text" />
+        <img [hidden]="position != 'down-left'" src="../../assets/img/down-left.jpg" alt="Alternate Text" />
+        <img  [hidden]="position != 'down'" src="../../assets/img/down.jpg" alt="Alternate Text" />
+        <img  [hidden]="position != 'up'" src="../../assets/img/up.jpg" alt="Alternate Text" />
+        <img  [hidden]="position != 'right'" src="../../assets/img/right.jpg" alt="Alternate Text" />
+        <img  [hidden]="position != 'down-right'" src="../../assets/img/down-right.jpg" alt="Alternate Text" />
+        <img  [hidden]="position != 'up-right'" src="../../assets/img/up-right.jpg" alt="Alternate Text" />
+      </div>
+    </div>
   </div>
   <br />
-  <p>
-    nnnnnnnnnnnn nnnnnnn nnnnnnnn nnnnnnnn nnnnnnnnnn nnnnnnnnn nnnnnnnnnnnnnnnnn nnnnnnnnnnnnn nnnnnnn
-    nnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnn
-    nnnnnnnnnnnnnn nnnnnnnnnnnnn nnnnnnnnnnnnn nnnnnnnnnnnnnn nnnnnnnnnnnnn nnnn nnnn nnnnnnnn nnnnnnnn
-    nnnnnnn nnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn nnnnnn nnnnnn nnnnnnnn
-    nnnnnnnnnnnnnnnnn nnnnnnnnnn nnnnnnnnnnnn nnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn nnnnn nnnnnnnnnnnnnnn
-    nnnnnnn nnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn nnnnnn nnnnnn nnnnnnnn
-    nnnnnnnnnnnnnnnnn nnnnnnnnnn nnnnnnnnnnnn nnnnnnnnnnnnnnn nnnnnnnnnnnnnnnnn nnnnn nnnnnnnnnnnnnnn
-    nnnnnnnnn nnnnnnnnnnnnnnnnnn nnnnnnn nnnnnnnnnnnnnnnnnnnn nnnnnnnnn nnnnnnnn nnnnnnnnn nnnnnnnnnnn
-    nnnnnnnnnnnnnnn nnnnnnnnnnnn nnnnnnnnnnnnn nnnnnnnnnnnnnn nnnnnnnn nnnnnnnnn nnnnnnnnnnnnnnnnnnnn
-  </p>
+  <div [@EnterFromRight]="state">
+    <p >
+      Hi! I am <span class="orange">Nemanja Prentić</span>, a Full Stack Developer from Podgorica, Montenegro.
+    </p>
+    <p>
+      I am a passionate coder who enjoys writing clean code.
+      I’d say that my  main strength as a developer is my self-confidence when it comes to solving problems.
+      In my solutions I always tend to <span  class="orange">simplicity</span> , as well as <span  class="orange">creativity</span> and
+      <span  class="orange">uniqueness</span>  when it comes to creating client-side of applications.
+    </p>
+  </div>
+
+        <div class="resume" [@EnterFromBottom]="state">
+          <i class="fa fa-download fa-2x"></i>
+          <p>&nbsp;Downolad my Resume</p>
+        </div>
 </div>

@@ -1,15 +1,15 @@
 
 <header>
-  <video playsinline="playsinline" autoplay="autoplay" loop="loop" onloadedmetadata="this.muted=true">
-    <source src="../../assets/img/Animation.mp4" type="video/mp4" >
+  <video playsinline="playsinline" autoplay="autoplay" loop="loop" class="video-animation" [muted]="true" >
+      <source src="../../assets/img/Animation.mp4" type="video/mp4">
   </video>
 
-  <div class="text-container">
-    <div class="headings-container">
-      <h1>Responsive Web Solutions</h1>
-      <h2>Full Stack Web Developer</h2>
+    <div class="text-container">
+      <div class="headings-container" @resize>
+        <h1>Responsive Web Solutions</h1>
+        <h2>Full Stack Developer</h2>
+      </div>
+      <h2 id="name">Nemanja Prentić</h2>
     </div>
-    <h2 id="name">Nemanja Prentić</h2>
-  </div>
 </header>
 

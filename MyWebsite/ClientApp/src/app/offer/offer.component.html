@@ -1,32 +1,45 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
 <br />
-<div id="services">
-    <h2 class="text-center titulo-sec fU" style="color:dimgray;">What services do I offer?</h2>
-    <br /><br /><br />
-    <div class="all">
-      <div class="service">
-        <div class="ilustration">
-          <i class="fa fa-laptop fa-5x"></i>
-        </div>
-        <p class="lead">Creating web applications</p>
-        <p>Frontend and Backend - From idea to reality</p>
+<div id="services" (appear)="state ='show'">
+  <h2 class="text-center titulo-sec fU" style="color:dimgray;">What do I do?</h2>
+  <br />
+  <div class="all" [@fadeInStaggering]="state">
+    <div class="service">
+      <div class="ilustration">
+        <i class="fa fa-laptop fa-4x"></i>
       </div>
+      <p class="lead">Web applications development</p>
+      <p>Frontend and Backend - From idea to reality</p>
+    </div>
+    <div class="service">
+      <div class="ilustration sandybrown">
+        <i class="fa fa-cogs fa-3x"></i>
+      </div>
+      <p class="lead">Support and upgrade of existing solutions</p>
+      <p>It doesn't matter if it's mine project or someone else's</p>
+    </div>
 
-      <div class="service">
-        <div class="ilustration" >
-          <i class="fa fa-cogs fa-5x"></i>
-        </div>
-        <p class="lead">Support and upgrade of existing websites</p>
-        <p>It doesn't matter if it's mine project or someone else's</p>
+    <div class="service">
+      <div class="ilustration lightgreen">
+        <i class="fa fa-android fa-3x"></i>
       </div>
-
-      <div class="service">
-        <div class="ilustration">
-          <i class="fa fa-server fa-5x"></i>
-        </div>
-        <p class="lead">Web hosting and domain registration</p>
-        <p></p>
+      <p class="lead">Android applications development</p>
+      <p></p>
+    </div>
+    <div class="service">
+      <div class="ilustration lightgray">
+        <i class="fa fa-apple fa-3x"></i>
       </div>
+      <p class="lead">IOS applications development</p>
+      <p></p>
+    </div>
+    <div class="service">
+      <div class="ilustration indianred">
+        <i class="fa fa-server fa-3x"></i>
+      </div>
+      <p class="lead">Web hosting and domain registration</p>
+      <p></p>
     </div>
   </div>
+</div>
 <br /><br />

@@ -1,7 +1,7 @@
 
 header {
   position: relative;
-  background-color: darkslategray;
+  background-color:  black;
   height: 100vh;
   min-height: 25rem;
   width: 100%;
@@ -33,25 +33,28 @@ header video {
 }
 
 .headings-container {
-  text-align: center;
-  border-top: 2px dotted sandybrown;
-  border-bottom: 2px dotted sandybrown;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-top: 4px dotted darkseagreen;
+  border-bottom: 4px dotted darkseagreen;
   padding: 30px 30px;
   transform: rotate(-4deg);
   margin: 25px;
-  opacity:1;
+  opacity: 1;
 }
 
 h1 {
-  color: sandybrown;
+  color: darkseagreen;
 }
 h2 {
- color: whitesmoke;
+  color: white;
 }
 
-  #name:first-letter {
-    font-style: italic;
-    font-weight: bold;
-    color: sandybrown;
-    margin: 5px;
-  }
+#name:first-letter {
+  font-style: italic;
+  font-weight: bold;
+  color: darkseagreen;
+  margin: 5px;
+}

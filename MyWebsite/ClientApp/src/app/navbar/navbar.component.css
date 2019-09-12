@@ -3,18 +3,18 @@
 .nav-area {
   position: fixed;
   top: 0;
-  padding: 0;
-  width: 100%;
-  background-color: sandybrown;
+  padding:13px 0;
+  width: 100vw;
+  background-color: darkseagreen;
   transition: ease 0.8s;
 }
 
 .nav-area1 {
   position: fixed;
   top: 0;
-  padding: 0;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
+  padding: 13px 0;
+  width: 100vw;
+  background-color: rgba(95, 158, 160, 0);
   transition: ease 0.8s;
 }
 
@@ -23,38 +23,44 @@ nav {
  padding:0;
 }
 
-button {
-  display:flex;
-  justify-content: center;
-  width: 50px;
-  height:50px;
-  background-color:cadetblue;
-  opacity:0.8;
-  margin:10px;
-
+button:focus {
+  outline: none;
 }
 
 i {
- color:lightgoldenrodyellow;
+ color:darkseagreen;
 }
 
-.a1 {
+a.a1 {
+  color: white;
+  padding: 5px 10px 1px 10px;
   font-family: 'Lucida Console';
-  color: lightgoldenrodyellow;
   font-size: 1.2em;
+  cursor: pointer;
+  transition: 200ms ease-in;
 }
 
-.a2 {
+a.a2 {
+  color: white;
+  padding: 5px 10px 1px 10px;
   font-family: 'Lucida Console';
-  color: lightgray;
   font-size: 1.2em;
+  cursor: pointer;
+  transition: 200ms ease-in;
 }
 
-.a1:hover {
-  color: cadetblue;
+a.a1:hover {
+  color: white;
 }
-.a2:hover {
-  color: gray;
+a.a2:hover {
+  color: darkseagreen;
+}
+
+a.a1.focus {
+  color: indianred;
+}
+a.a2.focus {
+  color: darkseagreen;
 }
 
 ul {
@@ -71,8 +77,10 @@ ul {
 
 .contact_button1 {
   font-family: 'Lucida Console';
-  border: 2px solid lightgoldenrodyellow;
-  color: lightgoldenrodyellow;
+  padding:5px;
+  border-radius:10px;
+  border: 2px solid white;
+  color: white;
   width: 150px;
   background-color: transparent;
   font-size: 1.2em;
@@ -80,25 +88,38 @@ ul {
 
 .contact_button2 {
   font-family: 'Lucida Console';
-  border: 2px solid lightgray;
-  color: lightgray;
+  padding: 5px;
+  border-radius: 10px;
+  border: 2px solid white;
+  color: white;
   width: 150px;
   background-color: transparent;
   font-size: 1.2em;
 }
 
 .contact_button1:hover {
-  color: cadetblue;
-  border-color: cadetblue;
+  color: indianred;
+  border-color: indianred;
 }
 
 .contact_button2:hover {
-  color: gray;
-  border-color: gray;
+  color: darkseagreen;
+  border-color: darkseagreen;
+}
+
+button.contact_button1.focus {
+  color: indianred;
+  border:2px solid indianred;
+  outline: none;
+}
+button.contact_button2.focus {
+  color: indianred;
+  border: 2px solid indianred;
 }
 
 li {
   list-style: none;
+  margin: 0 5px;
 }
 
 @media only screen and (max-width: 950px) {
@@ -107,7 +128,8 @@ li {
     background-color:transparent;
   }
 
-  ul {
+  nav>ul {
+    position: relative;
     margin: 0;
     display: flex;
     align-items: center;
@@ -116,7 +138,25 @@ li {
     height: 80vh;
     padding: 0;
     margin: 0;
-    background-color: sandybrown;
+    background-color: darkseagreen;
+    opacity:0;
+    transform:translateX(-100%);
+    transition: 300ms ease-in-out;
+  }
+
+  nav>.open {
+    position: relative;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    height: 80vh;
+    padding: 0;
+    margin: 0;
+    background-color: darkseagreen;
+    opacity: 1;
+    transform: translateX(0%);
   }
   li {
     margin:4vh;

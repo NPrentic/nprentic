@@ -1,67 +1,69 @@
 
-<div [ngClass]="{'nav-area': windowScrolled, 'nav-area1': !windowScrolled}"class="nav-area">
-  <nav class="navbar navbar-expand-lg navbar-light " style="background-color:transparent;">
-
+<div [ngClass]="{'nav-area': windowScrolled, 'nav-area1': !windowScrolled}" class="nav-area">
+  <nav class="navbar navbar-expand-lg navbar-light">
     <button (click)="toggleNav()" class="navbar-toggler" type="button" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false">
       <i class="fa fa-times fa-2x" *ngIf="isNavOpen"></i>
       <i class="fa fa-bars fa-2x" *ngIf="!isNavOpen"></i>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul>
-        <li class="nav-item">
-          <a class="nav-link"
-             (click)=" onClick('about')"
-             [routerLink]="['/']"
-             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}" >About me</a>
+        <li>
+          <a [class.focus]="focused == 'header'"
+             (click)=" onClick('header')"
+             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"
+          <a [class.focus]="focused == 'about'"
+             (click)=" onClick('about')"
+             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">About me</a>
+        </li>
+        <li class="nav-item">
+          <a [class.focus]="focused == 'offer'"
              (click)=" onClick('offer')"
-             [routerLink]="['/']"
              [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">Services</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"
+          <a [class.focus]="focused == 'skills'"
              (click)=" onClick('skills')"
-             [routerLink]="['/']"
              [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link"
-             (click)=" onClick('portfolio')"
-             [routerLink]="['/']"
-             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}">Portfolio</a>
+          <a (click)=" onClick('portfolio')"
+             [ngClass]="{'a1': windowScrolled, 'a2': !windowScrolled}"
+             [class.focus]="focused == 'portfolio'">Portfolio</a>
         </li>
         <li>
-          <button class="btn btn-outline-secondary"
-                  (click)=" onClick('contact')"
-                  [ngClass]="{'contact_button1': windowScrolled, 'contact_button2': !windowScrolled}">Contact me</button>
+          <button [class.focus]="focused == 'contact'"
+            (click)=" onClick('contact')"
+            [ngClass]="{'contact_button1': windowScrolled, 'contact_button2': !windowScrolled}">Contact me
+          </button>
         </li>
       </ul>
     </div>
-    <ul *ngIf="isNavOpen">
+    <ul class=".mobileVersion" [class.open]="isNavOpen">
       <li class="nav-item">
-        <a (click)=" onClick('about'); toggleNav() " [routerLink]="['/']" class="nav-link a1" >About me</a>
+        <a (click)=" onClick('header'); toggleNav() " [class.focus]="focused == 'header'" class="nav-link a1">Home</a>
       </li>
       <li class="nav-item">
-        <a (click)="onClick('offer'); toggleNav()" [routerLink]="['/']" class="nav-link a1" >Services</a>
+        <a (click)=" onClick('about'); toggleNav() " [class.focus]="focused == 'about'" class="nav-link a1">About me</a>
       </li>
       <li class="nav-item">
-        <a (click)="onClick('skills'); toggleNav()" [routerLink]="['/']" class="nav-link a1">Skills</a>
+        <a (click)="onClick('offer'); toggleNav()" [class.focus]="focused == 'offer'" class="nav-link a1">Services</a>
       </li>
       <li class="nav-item">
-        <a (click)="onClick('portfolio'); toggleNav()" [routerLink]="['/']" class="nav-link a1">Portfolio</a>
+        <a (click)="onClick('skills'); toggleNav()" [class.focus]="focused == 'skills'" class="nav-link a1">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a (click)="onClick('portfolio'); toggleNav()" [class.focus]="focused == 'portfolio'" class="nav-link a1">Portfolio</a>
       </li>
       <li>
-        <button (click)="onClick('contact'); toggleNav()" [routerLink]="['/']" class="btn btn-outline-secondary contact_button1" > Contact me</button>
+        <button (click)="onClick('contact'); toggleNav()" [class.focus]="focused == 'contact'" class="contact_button1"> Contact me</button>
       </li>
     </ul>
   </nav>
 </div>
-
 <ul id="mainNav">
-  <li><a href="https://www.facebook.com/nemanja.prentic" target="_blank"> <i class="fa fa-facebook fa-2x" ></i></a></li>
-  <li><a href="https://github.com/NPrentic/nprentic" target="_blank"> <i class="fa fa-github fa-2x" ></i></a></li>
+  <li><a href="https://www.facebook.com/nemanja.prentic" target="_blank"> <i class="fa fa-facebook fa-2x"></i></a></li>
+  <li><a href="https://github.com/NPrentic/nprentic" target="_blank"> <i class="fa fa-github fa-2x"></i></a></li>
   <li><a href="https://www.linkedin.com/in/nemanja-prentic-3a4ba918b" target="_blank"> <i class="fa fa-linkedin fa-2x"></i></a></li>
 </ul>

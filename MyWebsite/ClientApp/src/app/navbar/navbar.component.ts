@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef, Output, EventEmitter, Inject, HostListener } from '@angular/core';
+import { Component, OnInit, ElementRef, Output, EventEmitter, Inject, HostListener, Input } from '@angular/core';
 import { Location, DOCUMENT} from '@angular/common';
 
 @Component({
@@ -10,8 +10,9 @@ export class NavbarComponent implements OnInit {
   private toggleButton: any;
   private sidebarVisible: boolean;
   windowScrolled: boolean=false;
-  isNavOpen: boolean=false;
+  isNavOpen: boolean = false;
 
+  @Input('focused') focused: string;
   @Output('section-event') sectionEvent= new EventEmitter();
 
 

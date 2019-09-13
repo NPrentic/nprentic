@@ -3,7 +3,7 @@
 .nav-area {
   position: fixed;
   top: 0;
-  padding:13px 0;
+  padding:8px 0;
   width: 100vw;
   background-color: darkseagreen;
   transition: ease 0.8s;
@@ -12,7 +12,7 @@
 .nav-area1 {
   position: fixed;
   top: 0;
-  padding: 13px 0;
+  padding: 8px 0;
   width: 100vw;
   background-color: rgba(95, 158, 160, 0);
   transition: ease 0.8s;

@@ -46,8 +46,6 @@ export class AboutComponent implements OnInit {
     if (cursorX > imageRight && cursorY >= imageTop && cursorY <= imageBottom) this.position = 'right';
     if (cursorX > imageRight && cursorY > imageBottom) this.position = 'down-right';
 
-
-    console.log(cursorY);
     //console.log('top');
     //console.log(imageTop);
   }

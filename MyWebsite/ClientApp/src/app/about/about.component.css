@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr;
   justify-items: center;
-  padding: 11vh 0;
+  padding: 100px 0;
   text-align:center;
   overflow:hidden;
 }
@@ -49,6 +49,7 @@
  padding: 7px 15px;
  border-radius: 7px;
  cursor: pointer;
+ transition:100ms ease-in;
 }
   .resume p {
     color: white;
@@ -56,6 +57,7 @@
     margin:0;
     font-size: 1.4em;
   }
+
 span.orange {
  color: sandybrown;
 }

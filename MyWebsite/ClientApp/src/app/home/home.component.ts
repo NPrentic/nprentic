@@ -18,14 +18,13 @@ export class HomeComponent  {
 
   constructor() { }
 
-  onVideoLoad() { this.showLoader = false; }
-
   public gotoSection(section: string): void {
     if (section == 'header')
       this.sectionHeader.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
 
-    if (section == 'about')
+    if (section == 'about') 
       this.sectionAbout.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
 
     if (section == 'skills')
       this.sectionSkills.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -38,6 +37,7 @@ export class HomeComponent  {
 
     if (section == 'contact')
       this.sectionContact.nativeElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    
   }
 
   setFocusedComponent(focusedComponentName: string): void {

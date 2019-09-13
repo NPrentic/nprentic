@@ -1,8 +1,17 @@
-<div id="skills-component">
-  <h2 align="center" >What am I good at?</h2>
-
+<div id="skills-component" (appear)="state = 'show'">
+  <h2 align="center">What am I good at?</h2>
   <br /><br />
-  <div class="skills">
+
+  <div class="skills-container">
+    <div class="skill" *ngFor="let skill of skills">
+      <p> {{skill.title}}</p>
+      <div class="level-graphic-container">
+        <span class="level" *ngFor="let procent of skill.level | iterationPipe"  [@fillGraphic]="state"></span>
+      </div>
+    </div>
+  </div>
+</div>
+<!--<div class="skills">
     <div class="cube-container">
       <div class="photo-cube">
         <img class="front" src="../../assets/img/html.png" alt="">
@@ -136,4 +145,4 @@
     </div>
   </div>
   <br />
-</div>
+</div>-->

@@ -1,4 +1,79 @@
 #skills-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 11vh 8%;
+  text-align: center;
+}
+
+.skills-container {
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.skill {
+ display:flex;
+ flex-direction:column;
+ justify-content:flex-start;
+ align-items:flex-start;
+ margin:20px 100px;
+}
+
+.skill p {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin:0;
+}
+
+.level-graphic-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 0;
+  padding: 0;
+  background-color: lightgray;
+  height: 6px;
+  width: 500px;
+}
+
+.level {
+  background-color:sandybrown;
+  height:100%;
+  width: 10%;
+}
+@media only screen and (max-width: 600px) {
+
+  .skills-container {
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .level-graphic-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 0;
+    padding: 0;
+    background-color: lightgray;
+    height: 6px;
+    width: 300px;
+  }
+  .skill {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin: 20px;
+  }
+
+}
+
+  /*#skills-component {
   padding: 11vh 8%;
   text-align:center;
 }
@@ -24,7 +99,7 @@
   color: dimgray;
 }
 
-/*Button*/
+
 a.button {
  cursor:pointer;
 }
@@ -52,7 +127,7 @@ a.button {
     background-color:sandybrown;
   }
 
-/*Photo*/
+
 
 .photo-desc {
   font-size: .85em;
@@ -95,7 +170,7 @@ a.button {
     color: dimgray;
   }
 
-  /*Button*/
+
 
   .button {
     font-size: 0.9em;
@@ -120,7 +195,6 @@ a.button {
       background-color: sandybrown;
     }
 
-  /*Photo*/
 
   .photo-desc {
     font-size: .62em;
@@ -158,4 +232,4 @@ a.button {
 .back {
   transform: translateZ(-70px) rotateY(270deg);
   transform-origin: center left;
-}
+}*/

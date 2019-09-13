@@ -1,7 +1,7 @@
 
 #portfolioComponent {
   text-align:center;
-  padding:11vh 5%;
+  padding:100px 5%;
   background-color: darkgray;
 }
 
@@ -15,8 +15,8 @@
 
 .screenshot-container {
   display: inline-block;
-  height: 280px;
-  width: 450px;
+  height: 230px;
+  width: 350px;
   margin: 3% 3%;
   position: relative;
   background-color: black;

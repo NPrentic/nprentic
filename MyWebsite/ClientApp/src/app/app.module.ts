@@ -21,6 +21,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { InViewDirective } from './Directives/in-view';
+import { IterationPipe } from './Pipes/iteration.pipe';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { InViewDirective } from './Directives/in-view';
     PortfolioComponent,
     ContactComponent,
     InViewDirective,
-    FooterComponent
+    FooterComponent,
+    IterationPipe
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

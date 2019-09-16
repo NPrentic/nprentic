@@ -29,11 +29,12 @@ ul {
 .info {
   display: flex;
   justify-content: center;
-  width: 300px;
+  align-items:center;
+  width: 400px;
   height: auto;
   flex-direction: column;
-  background-color: darkslategray;
-  border-radius: 10%;
+  background-color: sandybrown;
+  border-radius: 20px;
   padding: 5%;
   margin: 5%;
 }
@@ -42,7 +43,7 @@ ul {
   .info ul {
     text-align: center;
     margin: 0 0 1rem 0;
-    color: lightgoldenrodyellow;
+    color: white;
   }
 
 /* ------- */
@@ -91,17 +92,33 @@ div.email-part {
 
      button {
       width: 150px;
-      font-family: 'Lucida Console';
-      background-color:transparent;
-      color: cadetblue;
-      border: 2px solid cadetblue;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      background-color:sandybrown;
+      color: white;
+      border-radius:10px;
+      padding:8px;
       margin:3%;
     }
-.inputs input {
- height:15px;
-}
+
+      button:focus {
+        outline:none;
+      }
+
+      .inputs input {
+        height: 15px;
+      }
 .inputs textarea {
   resize: none;
+}
+
+li>i {
+  color:indianred;
+  border: 2px solid indianred;
+  padding: 10px;
+  height: 60px;
+  width: 60px;
+  border-radius: 100%;
+  margin:25px 3px 3px 3px;
 }
 
 p {
@@ -115,7 +132,7 @@ p {
   }
 
   50% {
-    transform: scale3d(1.35, 1.35, 1.35);
+    transform: scale3d(1.45, 1.45, 1.45);
   }
 
   100% {
@@ -141,11 +158,11 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 350px;
     height: auto;
     flex-direction: column;
-    background-color: darkslategray;
-    border-radius: 10% ;
+    background-color: darkseagreen;
+    border-radius: 20px;
     padding: 5%;
     margin: 5%;
   }
@@ -153,7 +170,7 @@ p {
     .info ul {
       text-align: center;
       margin: 0 0 1rem 0;
-      color: lightgoldenrodyellow;
+      color: white;
     }
   .email-part {
     display: flex;

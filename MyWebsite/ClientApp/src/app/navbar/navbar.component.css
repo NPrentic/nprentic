@@ -122,34 +122,40 @@ li {
   margin: 0 5px;
 }
 
+button.navbar-toggler {
+ border:none;
+}
+
 @media only screen and (max-width: 950px) {
 
   .nav-area, .nav-area1 {
     background-color:transparent;
   }
 
-  nav>ul {
-    position: relative;
+  nav > ul {
+    position: absolute;
     margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
     width: 100vw;
     height: 80vh;
+    top: 8vh;
     padding: 0;
     margin: 0;
     background-color: darkseagreen;
-    opacity:0;
-    transform:translateX(-100%);
+    opacity: 0;
+    transform: translateX(-100%);
     transition: 300ms ease-in-out;
   }
 
   nav>.open {
-    position: relative;
+    position: absolute;
     margin: 0;
     display: flex;
     align-items: center;
     flex-direction: column;
+    top: 8vh;
     width: 100vw;
     height: 80vh;
     padding: 0;

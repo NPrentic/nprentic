@@ -13,6 +13,7 @@
 button{
   background-color: darkseagreen;
   border: none;
+  transition: 200ms ease;
 }
 button:hover {
   background-color: darkgray;

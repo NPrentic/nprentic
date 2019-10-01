@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef, ViewChild } from '@angular/core';
 import { EnterFromLeft, EnterFromRight, EnterFromBottom } from './about.animations';
 import { NgForm } from '@angular/forms';
+import { ResumeService } from '../Services/resume-service';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class AboutComponent implements OnInit {
   state: string = 'hide';
   position: string = 'center';
 
-  constructor(public el: ElementRef) { }
+  constructor(public el: ElementRef, private resumeService: ResumeService) { }
 
   ngOnInit() {
   }
@@ -49,4 +50,19 @@ export class AboutComponent implements OnInit {
     //console.log('top');
     //console.log(imageTop);
   }
+
+  downloadResume(): void {
+    this.resumeService.getPdfFile()
+      .subscribe((data) => {
+        let downloadLink = document.createElement('a');
+        var blob = new Blob([data], { type: 'application/pdf' });
+
+        downloadLink.href = window.URL.createObjectURL(new File([blob], 'report.pdf',
+          { type: 'application/pdf' }));
+        downloadLink.setAttribute('download', 'Nemanja Prentić - Resume.pdf');
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+      });
+  }
+
 }

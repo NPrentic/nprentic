@@ -4,9 +4,16 @@
 
   <div class="skills-container">
     <div class="skill" *ngFor="let skill of skills">
-      <p> {{skill.title}}</p>
+      <div class="title-procent-container">
+        <span class="title"> {{skill.title}}</span>
+        <div class="percentage" *ngIf="!showPercentage" @percentage>
+          <span>{{skill.level*10}}%</span>
+          <i class="fa fa-caret-down"></i>
+        </div>
+        <span *ngFor="let procent of 10-skill.level | iterationPipe" class="blank-space"></span>
+      </div>
       <div class="level-graphic-container">
-        <span class="level" *ngFor="let procent of skill.level | iterationPipe"  [@fillGraphic]="state"></span>
+        <span class="level" *ngFor="let procent of skill.level | iterationPipe" [@fillGraphic]="state" (@fillGraphic.start)="togglePercentage()"></span>
       </div>
     </div>
   </div>

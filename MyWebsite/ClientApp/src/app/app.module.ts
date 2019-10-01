@@ -5,7 +5,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app.routing';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { InViewportModule } from 'ng-in-viewport';
 
 
 import { AppComponent } from './app.component';
@@ -22,6 +21,7 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './footer/footer.component';
 import { InViewDirective } from './Directives/in-view';
 import { IterationPipe } from './Pipes/iteration.pipe';
+import { ResumeService } from './Services/resume-service';
 
 @NgModule({
   declarations: [
@@ -43,12 +43,11 @@ import { IterationPipe } from './Pipes/iteration.pipe';
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     RouterModule,
-    InViewportModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [ScrollService],
+  providers: [ScrollService, ResumeService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

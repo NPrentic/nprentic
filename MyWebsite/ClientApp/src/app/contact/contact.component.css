@@ -100,8 +100,8 @@ div.email-part {
       margin:3%;
     }
 
-      button:focus {
-        outline:none;
+      button:hover {
+        color: dimgray;
       }
 
       .inputs input {

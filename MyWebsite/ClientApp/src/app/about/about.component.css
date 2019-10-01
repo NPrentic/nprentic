@@ -57,6 +57,9 @@
     margin:0;
     font-size: 1.4em;
   }
+  .resume p:hover {
+    color: dimgray;
+  }
 
 span.orange {
  color: sandybrown;

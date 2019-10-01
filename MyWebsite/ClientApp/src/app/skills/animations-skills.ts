@@ -15,3 +15,11 @@ export let fillGraphic = trigger('fillGraphic', [
   )
 ]);
 
+
+export let percentage = trigger('percentage', [
+
+  transition(':enter', [
+    style({ opacity: 0, transform: 'translate3D(25px, -40px, 0)'}),
+    animate('2s 0s ease-out')
+  ])
+]);

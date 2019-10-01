@@ -1,17 +1,18 @@
 import { Component, OnInit } from '@angular/core';
-import { fillGraphic } from './animations-skills';
+import { fillGraphic, percentage } from './animations-skills';
 import { fadeIn } from '../GlobalAnimations/custom-animations';
 
 @Component({
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
-  animations: [fillGraphic, fadeIn]
+  animations: [fillGraphic, fadeIn, percentage]
 })
 export class SkillsComponent implements OnInit {
 
   skills: Skill[] = [];
   state: string = 'hide';
+  showPercentage: boolean = false;
 
   constructor() { }
 
@@ -29,14 +30,20 @@ export class SkillsComponent implements OnInit {
     this.skills.push({title: 'LINQ', level: 10});
     this.skills.push({title: 'SQL', level: 9});
     this.skills.push({title: 'Entity Framework', level: 10});
-    this.skills.push({title: 'Flutter', level: 6});
-    this.skills.push({title: 'Dart', level: 6});
+    this.skills.push({title: 'Flutter', level: 5});
+    this.skills.push({title: 'Dart', level: 5});
     this.skills.push({title: 'Git', level: 9});
 
   }
+
   goToLink(url: string) {
     window.open(url, "_blank");
   }
+
+  togglePercentage() {
+    this.showPercentage = !this.showPercentage;
+  }
+
 }
 
 class Skill {

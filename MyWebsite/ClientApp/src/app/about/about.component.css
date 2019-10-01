@@ -51,14 +51,15 @@
  cursor: pointer;
  transition:100ms ease-in;
 }
-  .resume p {
+  .resume p, .resume i {
     color: white;
     font-size: 1em;
     margin:0;
     font-size: 1.4em;
+    opacity:0.7;
   }
-  .resume p:hover {
-    color: dimgray;
+  .resume:hover p, .resume:hover i {
+   opacity:1;
   }
 
 span.orange {

@@ -22,6 +22,7 @@ import { FooterComponent } from './footer/footer.component';
 import { InViewDirective } from './Directives/in-view';
 import { IterationPipe } from './Pipes/iteration.pipe';
 import { ResumeService } from './Services/resume-service';
+import { EmailService } from './Services/email-service';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,7 @@ import { ResumeService } from './Services/resume-service';
     BrowserAnimationsModule,
     FormsModule
   ],
-  providers: [ScrollService, ResumeService],
+  providers: [ScrollService, ResumeService, EmailService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

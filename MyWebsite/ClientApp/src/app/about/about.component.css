@@ -30,7 +30,7 @@
     width: 280px;
     transform: scale(1.2);
     transition: ease-in-out;
-    opacity: 1;
+    opacity: 0.9;
   }
 
   p {
